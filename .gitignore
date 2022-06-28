@@ -23,3 +23,4 @@ output/
 *.gls
 
 .vs/*
+.vscode/settings.json

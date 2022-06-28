@@ -17,7 +17,7 @@
 	headsepline,		% Linie nach Kopfzeile.
 	footsepline,		% Linie vor Fusszeile.
 	footheight = 16pt,	% Höhe der Fusszeile
-	abstracton,		% Abstract Überschriften
+	abstract = true,	% Abstract Überschriften
 	DIV=calc,		% Satzspiegel berechnen
 	BCOR=8mm,		% Bindekorrektur links: 8mm
 	headinclude=false,	% Kopfzeile nicht in den Satzspiegel einbeziehen
@@ -71,6 +71,7 @@
 \usepackage{listings}
 \usepackage{tablefootnote}
 \usepackage{makecell}
+\usepackage{scrhack}
 
 % Notizen. Einsatz mit \todo{Notiz} oder \todo[inline]{Notiz}. 
 \usepackage[obeyFinal,backgroundcolor=yellow,linecolor=black]{todonotes}
@@ -125,7 +126,7 @@
 % Literaturverweise (sowohl deutsch als auch englisch)
 \iflang{de}{%
 \usepackage[
-	backend=bibtex,		% empfohlen. Falls biber Probleme macht: bibtex
+	backend=biber,		% empfohlen. Falls biber Probleme macht: bibtex
 	bibwarn=true,
 	bibencoding=utf8,	% wenn .bib in utf8, sonst ascii
 	sortlocale=de_DE,
@@ -134,7 +135,7 @@
 }
 \iflang{en}{%
 \usepackage[
-	backend=bibtex,		% empfohlen. Falls biber Probleme macht: bibtex
+	backend=biber,		% empfohlen. Falls biber Probleme macht: bibtex
 	bibwarn=true,
 	bibencoding=utf8,	% wenn .bib in utf8, sonst ascii
 	sortlocale=en_US,
